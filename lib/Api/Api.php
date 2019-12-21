@@ -1,17 +1,17 @@
 <?php
 /**
- * @package     Nextlead
- * @copyright   2014 Nextlead, NP. All rights reserved.
- * @author      Nextlead
- * @link        http://nextlead.dev
+ * @package     Shayand
+ * @copyright   2014 Shayand, NP. All rights reserved.
+ * @author      Shayand
+ * @link        http://shayand.com
  * @license     MIT http://opensource.org/licenses/MIT
  */
 
-namespace Nextlead\Api;
+namespace Shayand\Api;
 
-use Nextlead\QueryBuilder\QueryBuilder;
-use Nextlead\Auth\ApiAuth;
-use Nextlead\Auth\AuthInterface;
+use Shayand\QueryBuilder\QueryBuilder;
+use Shayand\Auth\ApiAuth;
+use Shayand\Auth\AuthInterface;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
@@ -57,7 +57,7 @@ class Api implements LoggerAwareInterface
     protected $endpointsSupported = array();
 
     /**
-     * Array of deprecated endpoints to use if a response fails as a 404 with a previous version of Nextlead
+     * Array of deprecated endpoints to use if a response fails as a 404 with a previous version of Shayand
      *
      * @var array
      */
@@ -248,7 +248,7 @@ class Api implements LoggerAwareInterface
                 $error = array(
                     'code'    => 500,
                     'message' => sprintf(
-                        'URL is incomplete.  Please use %s, set the base URL as the third argument to $NextleadApi->newApi(), or make $endpoint a complete URL.',
+                        'URL is incomplete.  Please use %s, set the base URL as the third argument to $ShayandApi->newApi(), or make $endpoint a complete URL.',
                         __CLASS__.'setBaseUrl()'
                     )
                 );
@@ -284,7 +284,7 @@ class Api implements LoggerAwareInterface
                         );
                     }
                 } catch (\Exception $e) {
-                    $this->getLogger()->error('Failed connecting to Nextlead API: '.$e->getMessage(), array('trace' => $e->getTraceAsString()));
+                    $this->getLogger()->error('Failed connecting to Shayand API: '.$e->getMessage(), array('trace' => $e->getTraceAsString()));
 
                     $error = array(
                         'code'    => $e->getCode(),
@@ -300,7 +300,7 @@ class Api implements LoggerAwareInterface
                     'error'  => $error
                 );
             } elseif (!empty($response['errors'])) {
-                $this->getLogger()->error('Nextlead API returned errors: '.var_export($response['errors'], true));
+                $this->getLogger()->error('Shayand API returned errors: '.var_export($response['errors'], true));
             }
 
             // @deprecated 2.6.0 BC error handling
@@ -363,17 +363,17 @@ class Api implements LoggerAwareInterface
     }
 
     /**
-     * Returns Nextlead version from the HTTP response headers
-     * (the header exists since Nextlead 2.4.0)
+     * Returns Shayand version from the HTTP response headers
+     * (the header exists since Shayand 2.4.0)
      *
      * @return string|null if not known
      */
-    public function getNextleadVersion()
+    public function getShayandVersion()
     {
         $headers = $this->auth->getResponseHeaders();
 
-        if (isset($headers['Nextlead-Version'])) {
-            return $headers['Nextlead-Version'];
+        if (isset($headers['Shayand-Version'])) {
+            return $headers['Shayand-Version'];
         }
 
         return null;

@@ -1,15 +1,15 @@
 <?php
 
 /*
- * @copyright   2014 Nextlead Contributors. All rights reserved
- * @author      Nextlead, Inc.
+ * @copyright   2014 Shayand Contributors. All rights reserved
+ * @author      Shayand, Inc.
  *
- * @link        https://Nextlead.org
+ * @link        https://Shayand.org
  *
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-namespace Nextlead\Auth;
+namespace Shayand\Auth;
 
 interface AuthInterface
 {

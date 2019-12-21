@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Nextlead
- * @copyright   2014 Nextlead, NP. All rights reserved.
- * @author      Nextlead
- * @link        http://nextlead.dev
+ * @package     Shayand
+ * @copyright   2014 Shayand, NP. All rights reserved.
+ * @author      Shayand
+ * @link        http://shayand.com
  * @license     MIT http://opensource.org/licenses/MIT
  */
 
-namespace Nextlead\Exception;
+namespace Shayand\Exception;
 
 /**
  * Abstract Exception class with common behavour - DRY implementation.

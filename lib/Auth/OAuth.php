@@ -1,18 +1,18 @@
 <?php
 
 /*
- * @copyright   2014 Nextlead Contributors. All rights reserved
- * @author      Nextlead, Inc.
+ * @copyright   2014 Shayand Contributors. All rights reserved
+ * @author      Shayand, Inc.
  *
- * @link        https://Nextlead.org
+ * @link        https://Shayand.org
  *
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-namespace Nextlead\Auth;
+namespace Shayand\Auth;
 
-use Nextlead\Exception\AuthorizationRequiredException;
-use Nextlead\Exception\IncorrectParametersReturnedException;
+use Shayand\Exception\AuthorizationRequiredException;
+use Shayand\Exception\IncorrectParametersReturnedException;
 
 /**
  * OAuth Client modified from https://code.google.com/p/simple-php-oauth/
@@ -291,7 +291,7 @@ class OAuth extends AbstractAuth
     }
 
     /**
-     * @param string $baseUrl URL of the Nextlead instance
+     * @param string $baseUrl URL of the Shayand instance
      * @param string $version ['OAuth1a', ''OAuth2'']. 'OAuth2' is default value
      * @param string $clientKey
      * @param string $clientSecret
@@ -512,7 +512,7 @@ class OAuth extends AbstractAuth
         $query = parent::getQueryParameters($isPost, $parameters);
 
         if (isset($parameters['file'])) {
-            // Nextlead's OAuth2 server does not recognize multipart forms so we have to append the access token as part of the URL
+            // Shayand's OAuth2 server does not recognize multipart forms so we have to append the access token as part of the URL
             $query['access_token'] = $parameters['access_token'];
         }
 
@@ -712,7 +712,7 @@ class OAuth extends AbstractAuth
                 }
                 $response = implode("; ", $errors);
             } elseif (isset($params['error'])) {
-                // @deprecated support for pre Nextlead 2.6.0
+                // @deprecated support for pre Shayand 2.6.0
                 if (is_array($params['error'])) {
                     if (isset($params['error']['message'])) {
                         $response = $params['error']['message'];

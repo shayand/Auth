@@ -1,18 +1,18 @@
 <?php
 
 /*
- * @copyright   2017 Nextlead Contributors. All rights reserved
- * @author      Nextlead, Inc.
+ * @copyright   2017 Shayand Contributors. All rights reserved
+ * @author      Shayand, Inc.
  *
- * @link        https://Nextlead.org
+ * @link        https://Shayand.org
  *
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-namespace Nextlead\Auth;
+namespace Shayand\Auth;
 
-use Nextlead\Exception\UnexpectedResponseFormatException;
-use Nextlead\Response;
+use Shayand\Exception\UnexpectedResponseFormatException;
+use Shayand\Response;
 
 /**
  * Class AbstractAuth

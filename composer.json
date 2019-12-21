@@ -1,15 +1,15 @@
 {
-    "name": "nextlead/api-library",
+    "name": "shayand/api-library",
     "type": "library",
     "license": "MIT",
 	"autoload": {
 		"psr-4": {
-		  "Nextlead\\": "lib/"
+		  "Shayand\\": "lib/"
 		}
 	},
     "autoload-dev": {
       "psr-4": {
-        "Nextlead\\Tests\\": "tests/"
+        "Shayand\\Tests\\": "tests/"
       }
     },
     "require": {

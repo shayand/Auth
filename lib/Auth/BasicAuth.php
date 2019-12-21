@@ -1,10 +1,10 @@
 <?php
 
 /*
- * @copyright   2017 Nextlead Contributors. All rights reserved
- * @author      Nextlead, Inc.
+ * @copyright   2017 Shayand Contributors. All rights reserved
+ * @author      Shayand, Inc.
  *
- * @link        https://Nextlead.org
+ * @link        https://Shayand.org
  *
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
@@ -14,7 +14,7 @@
 | Basic Authentication Flow
 |--------------------------------------------------------------------------
 |
-| use Nextlead\Auth\ApiAuth;
+| use Shayand\Auth\ApiAuth;
 |
 | // ApiAuth->newAuth() will accept an array of Auth settings
 | $settings = array(
@@ -34,10 +34,10 @@
 |
 | To use, just pass the auth object to the Api context you are creating.
 |
-| use Nextlead\NextleadApi;
+| use Shayand\ShayandApi;
 |
 | // Get a Contact context
-| $api = new NextleadApi();
+| $api = new ShayandApi();
 | $contactApi = $api->newApi('contacts', $auth, $settings['apiUrl']);
 |
 | // Get Contact list
@@ -51,9 +51,9 @@
 |
 */
 
-namespace Nextlead\Auth;
+namespace Shayand\Auth;
 
-use Nextlead\Exception\RequiredParameterMissingException;
+use Shayand\Exception\RequiredParameterMissingException;
 
 /**
  * Basic Authentication Client mashed together by MarkLL

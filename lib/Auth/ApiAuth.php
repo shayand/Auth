@@ -1,15 +1,15 @@
 <?php
 
 /*
- * @copyright   2014 Nextlead Contributors. All rights reserved
- * @author      Nextlead, Inc.
+ * @copyright   2014 Shayand Contributors. All rights reserved
+ * @author      Shayand, Inc.
  *
- * @link        https://Nextlead.org
+ * @link        https://Shayand.org
  *
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-namespace Nextlead\Auth;
+namespace Shayand\Auth;
 
 /**
  * OAuth Client modified from https://code.google.com/p/simple-php-oauth/
@@ -43,7 +43,7 @@ class ApiAuth
      */
     public function newAuth($parameters = array(), $authMethod = 'OAuth')
     {
-        $class      = 'Nextlead\\Auth\\'.$authMethod;
+        $class      = 'Shayand\\Auth\\'.$authMethod;
         $authObject = new $class();
 
         $reflection = new \ReflectionMethod($class, 'setup');

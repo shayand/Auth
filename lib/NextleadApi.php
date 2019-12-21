@@ -1,21 +1,21 @@
 <?php
 /**
- * @package     Nextlead
- * @copyright   2014 Nextlead, NP. All rights reserved.
- * @author      Nextlead
- * @link        http://nextlead.dev
+ * @package     Shayand
+ * @copyright   2014 Shayand, NP. All rights reserved.
+ * @author      Shayand
+ * @link        http://shayand.com
  * @license     MIT http://opensource.org/licenses/MIT
  */
 
-namespace Nextlead;
+namespace Shayand;
 
-use Nextlead\Auth\AuthInterface;
-use Nextlead\Exception\ContextNotFoundException;
+use Shayand\Auth\AuthInterface;
+use Shayand\Exception\ContextNotFoundException;
 
 /**
- * Nextlead API Factory
+ * Shayand API Factory
  */
-class NextleadApi
+class ShayandApi
 {
     /**
      * Get an API context object
@@ -36,7 +36,7 @@ class NextleadApi
         $apiContext = ucfirst($apiContext);
 
         if (!isset($context[$apiContext])) {
-            $class = 'Nextlead\\Api\\'.$apiContext;
+            $class = 'Shayand\\Api\\'.$apiContext;
 
             if (!class_exists($class)) {
                 throw new ContextNotFoundException("A context of '$apiContext' was not found.");
@@ -62,7 +62,7 @@ class NextleadApi
     {
         $apiContext = ucfirst($apiContext);
 
-        $class = 'Nextlead\\Api\\'.$apiContext;
+        $class = 'Shayand\\Api\\'.$apiContext;
 
         if (!class_exists($class)) {
             throw new ContextNotFoundException("A context of '$apiContext' was not found.");

@@ -1,15 +1,15 @@
 <?php
 
 /*
- * @copyright   2016 Nextlead Contributors. All rights reserved
- * @author      Nextlead, Inc.
+ * @copyright   2016 Shayand Contributors. All rights reserved
+ * @author      Shayand, Inc.
  *
- * @link        https://Nextlead.org
+ * @link        https://Shayand.org
  *
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-namespace Nextlead\QueryBuilder;
+namespace Shayand\QueryBuilder;
 
 /**
  * Class WhereBuilder

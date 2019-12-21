@@ -4,7 +4,7 @@ session_start();
 
 require dirname(__DIR__).'/vendor/autoload.php';
 
-use Nextlead\Auth\OAuthClient;
+use Shayand\Auth\OAuthClient;
 
 $auth = (isset($_POST['auth'])) ? $_POST['auth'] : @$_SESSION['auth'];
 if (empty($auth)) {
@@ -139,7 +139,7 @@ if (isset($_SESSION['redirect'])) {
         $_SESSION['parameters']   = $parameters;
 
 
-        $oauthObject = \Nextlead\Auth\ApiAuth::initiate(
+        $oauthObject = \Shayand\Auth\ApiAuth::initiate(
             array(
                 'baseUrl'       => $oauthBaseUrl,
                 'version'       => $auth,
@@ -331,7 +331,7 @@ ENDPOINT;
 
         <div class="row">
             <div class="col-lg-5" style="padding-right: 0px !important;">
-                <input class="form-control custom-right" type="text" value="<?php echo $apiurl; ?>" placeholder="Nextlead URL" name="apiurl">
+                <input class="form-control custom-right" type="text" value="<?php echo $apiurl; ?>" placeholder="Shayand URL" name="apiurl">
             </div>
             <div class="col-lg-1 text-center" style="padding: 8px; font-size: 15px;"><strong>/api/</strong></div>
             <div class="col-lg-6" style="padding-left: 0px !important;">

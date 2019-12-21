@@ -1,15 +1,15 @@
 <?php
 /**
- * @package     Nextlead
- * @copyright   2014 Nextlead, NP. All rights reserved.
- * @author      Nextlead
- * @link        http://nextlead.dev
+ * @package     Shayand
+ * @copyright   2014 Shayand, NP. All rights reserved.
+ * @author      Shayand
+ * @link        http://shayand.com
  * @license     MIT http://opensource.org/licenses/MIT
  */
 
-namespace Nextlead;
+namespace Shayand;
 
-use Nextlead\Exception\UnexpectedResponseFormatException;
+use Shayand\Exception\UnexpectedResponseFormatException;
 
 /**
  * Class helping with API responses
@@ -131,7 +131,7 @@ class Response
                 throw new \Exception('Cannot create directory ' . $path);
             };
         }
-        $file = tempnam($path, 'Nextlead_api_');
+        $file = tempnam($path, 'Shayand_api_');
 
         if (!is_writable($file)) {
             throw new \Exception($file.' is not writable');
