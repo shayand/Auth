@@ -15,7 +15,7 @@ use Shayand\Exception\ContextNotFoundException;
 /**
  * Shayand API Factory
  */
-class ShayandApi
+class NextleadApi
 {
     /**
      * Get an API context object

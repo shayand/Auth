@@ -23,7 +23,7 @@ to choose what method should be used by your code.
 // Bootup the Composer autoloader
 include __DIR__ . '/vendor/autoload.php';  
 
-use NextLead\Auth\ApiAuth;
+use Shayand\Auth\ApiAuth;
 
 session_start();
 
@@ -89,7 +89,7 @@ Here is the BasicAuth version of the code above.
 // Bootup the Composer autoloader
 include __DIR__ . '/vendor/autoload.php';  
 
-use NextLead\Auth\ApiAuth;
+use Shayand\Auth\ApiAuth;
 
 session_start();
 
@@ -125,7 +125,7 @@ Now that you have an access token and the auth object, you can make API requests
 ```php
 <?php
 
-use NextLead\NextLeadApi;
+use Shayand\NextLeadApi;
 
 // Create an api context by passing in the desired context (Contacts, Forms, Pages, etc), the $auth object from above
 // and the base URL to the NextLead server (i.e. http://my-NextLead-server.com/api/)
