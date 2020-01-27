@@ -4,7 +4,7 @@
 * PHP 5.3.7 or newer
 * cURL support
 
-## NextLead Setup
+## Shayand Setup
 The API must be enabled in NextLead. Within NextLead, go to the Configuration page (located in the Settings menu) and under API Settings enable
 NextLead's API. If you intend on using Basic Authentication, ensure you enable it. You can also choose which OAuth protocol to use here.  After saving the configuration, go to the API Credentials page
 (located in the Settings menu) and create a new client.  Enter the callback/redirect URI that the request will be sent from.  Click Apply
